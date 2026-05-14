@@ -1,0 +1,35 @@
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'scope-enum': [
+      2,
+      'always',
+      [
+        'build',
+        'client/cordova',
+        'client/cordova/android',
+        'client/cordova/apple',
+        'client/cordova/apple/ios',
+        'client/cordova/apple/macos',
+        'client/electron',
+        'client/electron/linux',
+        'client/electron/windows',
+        'devtools',
+        'docs',
+        'manager',
+        'manager/linux',
+        'manager/mac',
+        'manager/windows',
+        'service',
+        'service/linux',
+        'service/windows',
+        'www',
+      ],
+    ],
+    'type-enum': [
+      2,
+      'always',
+      ['build', 'chore', 'ci', 'docs', 'feat', 'fix', 'perf', 'proposal', 'refactor', 'revert', 'style', 'test'],
+    ],
+  },
+};

@@ -33,7 +33,7 @@ class VPNManager: ObservableObject {
         self.vpnManager = managers.first ?? NETunnelProviderManager()
         
         // Set localized description
-        self.vpnManager?.localizedDescription = "MyVPN"
+        self.vpnManager?.localizedDescription = "VPN"
         
         // Save to preferences
         try await self.vpnManager?.saveToPreferences()
@@ -49,7 +49,7 @@ class VPNManager: ObservableObject {
         
         // Create protocol configuration
         let protocolConfig = NETunnelProviderProtocol()
-        protocolConfig.providerBundleIdentifier = "com.mycompany.myvpn.tunnel"
+        protocolConfig.providerBundleIdentifier = "com.vpn.tunnel"
         protocolConfig.serverAddress = config.host
         protocolConfig.providerConfiguration = ["xrayConfig": config.toXrayJSON()]
         

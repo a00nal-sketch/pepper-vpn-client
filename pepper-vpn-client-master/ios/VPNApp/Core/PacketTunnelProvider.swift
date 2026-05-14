@@ -17,7 +17,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             let error = NSError(
                 domain: NEVPNErrorDomain,
                 code: NEVPNError.configurationDisabled.rawValue,
-                userInfo: [NSLocalizedDescriptionKey: "Please use the PepperVPN app to connect."]
+                userInfo: [NSLocalizedDescriptionKey: "Please use the VPN app to connect."]
             )
             throw error
         }
@@ -114,7 +114,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
 
 private class TunnelInterface {
     private var isRunning = false
-    private var queue = DispatchQueue(label: "com.peppervpn.tunnel")
+    private var queue = DispatchQueue(label: "com.vpn.tunnel")
     
     func start() {
         isRunning = true

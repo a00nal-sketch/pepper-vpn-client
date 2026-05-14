@@ -11,7 +11,7 @@ struct ContentView: View {
         VStack(spacing: 16) {
             
             // Title
-            Text("MyVPN")
+            Text("VPN")
                 .font(.largeTitle).bold()
                 .padding(.top, 40)
             
